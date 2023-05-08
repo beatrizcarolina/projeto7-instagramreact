@@ -5,7 +5,7 @@ function Post(props) {
     const [likesNumber, setLikesNumber] = React.useState(props.postInfo.likes);
     const [likeState, setLikeState] = React.useState({name: "heart-outline", red: false, animation: false});
 
-    function toggleSave() {
+    function toggleSavePost() {
         if (bookMark === "bookmark") {
             setBookMark("bookmark-outline");
             return;
@@ -56,7 +56,7 @@ function Post(props) {
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
                     <div>
-                        <ion-icon name={bookMark} onClick={toggleSave} data-test="save-post"></ion-icon>
+                        <ion-icon name={bookMark} onClick={toggleSavePost} data-test="save-post"></ion-icon>
                     </div>
                 </div>
 
